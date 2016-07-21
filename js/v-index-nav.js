@@ -1,3 +1,12 @@
+/*!
+ * vIndexNav v1.0
+ *
+ * Contact: https://github.com/xiaolin3303
+ * 2016-07-20
+ *
+ * Designed and built with all the love of Web
+ */
+
 function vIndexNav (opts) {
 	opts = opts || {};
 	this.opts = $.extend({
