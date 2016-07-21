@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/v-index-nav.css">
+	<style type="text/css">
+		html, body {
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		ul.list li {
+			margin-top: 10px;
+		}
+		.nav-bar {
+			height: 30px;
+			line-height: 30px;
+			border-bottom: 1px solid #ccc;
+			text-indent: 15px;
+			background: #eee
+		}
+	</style>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+	<script type="text/javascript" src="js/v-index-nav.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			new vIndexNav({
+				target: $('.my-list'),
+				onNav: function (index) {
+					console.log(index);
+				}
+			});
+		});
+</script>
+</head>
+<body>
+	<ul class="my-list">
+		<li v-nav-index="A" class="nav-bar">A</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores laboriosam voluptatem vitae! Similique placeat sapiente blanditiis iure laudantium officia. Laudantium quo illo nobis ducimus nesciunt fugit maiores omnis facere tenetur?</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis, maiores deserunt ducimus qui voluptate fugit earum dignissimos commodi consectetur quasi. Reiciendis explicabo consequuntur nostrum repellat nobis nihil error dolores?</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam reiciendis, natus animi. Soluta ullam nemo, quam quos fuga quidem facere explicabo. Dignissimos illo officia, corporis consectetur ea laudantium dicta voluptate!</li>
+		<li v-nav-index="B" class="nav-bar">B</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem temporibus omnis labore quidem voluptatum quibusdam perferendis magnam voluptatem commodi sint aperiam consectetur quia quam, culpa reprehenderit. Eaque illo fugiat, placeat.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti officiis aliquid iure quam, autem soluta neque dignissimos dolores veritatis totam hic suscipit eum atque recusandae nihil, qui velit repellendus error!</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, eius consequatur non sapiente accusantium minima iure voluptatum sequi veritatis omnis asperiores quia blanditiis atque animi provident quidem reprehenderit inventore quisquam.</li>
+		<li v-nav-index="C" class="nav-bar">C</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis esse modi, neque odio nihil harum doloremque laborum fugit natus soluta ipsa quisquam dolorum, nobis eos et quos aliquid atque ex!</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum perferendis deleniti odit, fugit tempora ipsum quisquam dignissimos reiciendis voluptatibus veritatis quaerat delectus alias libero vitae, ullam sunt dolore hic. Amet.</li>
+		<li v-nav-index="D" class="nav-bar">D</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit dolor error omnis nostrum distinctio facere ipsam amet repellendus assumenda molestiae deserunt accusamus debitis, perferendis. Alias quaerat ut architecto natus deserunt.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ullam autem repellat voluptatum ipsa ea, qui nobis odio, culpa numquam architecto iure quam eos cumque reprehenderit assumenda eius! Cupiditate, sit!</li>
+		<li v-nav-index="F" class="nav-bar">F</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem temporibus omnis labore quidem voluptatum quibusdam perferendis magnam voluptatem commodi sint aperiam consectetur quia quam, culpa reprehenderit. Eaque illo fugiat, placeat.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti officiis aliquid iure quam, autem soluta neque dignissimos dolores veritatis totam hic suscipit eum atque recusandae nihil, qui velit repellendus error!</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, eius consequatur non sapiente accusantium minima iure voluptatum sequi veritatis omnis asperiores quia blanditiis atque animi provident quidem reprehenderit inventore quisquam.</li>
+		<li v-nav-index="X" class="nav-bar">X</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis esse modi, neque odio nihil harum doloremque laborum fugit natus soluta ipsa quisquam dolorum, nobis eos et quos aliquid atque ex!</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum perferendis deleniti odit, fugit tempora ipsum quisquam dignissimos reiciendis voluptatibus veritatis quaerat delectus alias libero vitae, ullam sunt dolore hic. Amet.</li>
+		<li v-nav-index="Z" class="nav-bar">Z</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit dolor error omnis nostrum distinctio facere ipsam amet repellendus assumenda molestiae deserunt accusamus debitis, perferendis. Alias quaerat ut architecto natus deserunt.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ullam autem repellat voluptatum ipsa ea, qui nobis odio, culpa numquam architecto iure quam eos cumque reprehenderit assumenda eius! Cupiditate, sit!</li>
+	</ul>
+</body>
+</html>
