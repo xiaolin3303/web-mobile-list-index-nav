@@ -10,6 +10,7 @@
 function vIndexNav (opts) {
 	opts = opts || {};
 	this.opts = $.extend({
+		offset: 0,
 		onNav: function () {}
 	}, opts);
 
@@ -38,12 +39,12 @@ vIndexNav.prototype.render = function () {
 	var navTpl = '<div><ul></ul></div>';
 	this.navWrapper = $(navTpl);
 	this.navWrapper.addClass('v-index-nav');
-	$('body').append(this.navWrapper);
+	this.opts.target.append(this.navWrapper);
 
 	var tipTpl = '<div></div>';
-	this.tipWrapper = $(tipTpl);
-	this.tipWrapper.addClass('v-nav-index-tip');
-	$('body').append(this.tipWrapper);
+	this.tipEle = $(tipTpl);
+	this.tipEle.addClass('v-nav-index-tip');
+	this.opts.target.append(this.tipEle);
 }
 
 vIndexNav.prototype.collectIndex = function () {
@@ -97,9 +98,11 @@ vIndexNav.prototype.showIndexTip = function (index) {
 		clearTimeout(this.tipTimer);
 	}
 
-	$('.v-nav-index-tip').text(index).show();
+	var me = this;
+
+	this.tipEle.text(index).show();
 	this.tipTimer = setTimeout(function () {
-		$('.v-nav-index-tip').hide();
+		me.tipEle.hide();
 	}, 1000);
 }
 
@@ -110,6 +113,7 @@ vIndexNav.prototype.moveTo = function (index) {
 
 	if (target) {
 		var top = target.offset().top;
+		top += this.opts.offset;
 		window.scrollTo(0, top);
 	}
 }
